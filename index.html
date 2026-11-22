@@ -9,17 +9,33 @@
 </head>
 <body>
     <nav>
-        <div class="logo">Yusuf Mahat</div>
+        <div class="logo">
+            <img src="assets/images/profile.jpg" alt="Muhammad Yusuf Bin Mahat" class="nav-profile-img">
+            <span>Yusuf Mahat</span>
+        </div>
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects & Research</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <header>
-        <h1>Muhammad Yusuf Bin Mahat</h1>
-        <p>Aerospace & Mechanical Engineer | Hybrid Rocket Propulsion R&D</p>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Muhammad Yusuf Bin Mahat</h1>
+                <p class="subtitle">Aerospace & Mechanical Engineer</p>
+                <p class="tagline">Hybrid Rocket Propulsion R&D | CSWP-Certified CAD</p>
+
+                <div class="hero-actions">
+                    <a href="assets/docs/cv.pdf" class="btn" target="_blank">View CV</a>
+                    <a href="#projects" class="btn btn-secondary">Technical Projects</a>
+                    <a href="#experience" class="btn btn-secondary">Experience</a>
+                    <a href="assets/docs/cad-portfolio.pdf" class="btn" target="_blank">CAD Portfolio</a>
+                </div>
+            </div>
+        </div>
     </header>
 
     <section id="about">
@@ -32,6 +48,55 @@
             <li><strong>CAD & Simulation:</strong> SolidWorks (CSWP/CSWA), ANSYS Fluent, ANSYS Static Structural, Onshape.</li>
             <li><strong>Programming & Avionics:</strong> MATLAB, Python, C++/Arduino, LoRa telemetry.</li>
         </ul>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+
+        <div class="exp-card">
+            <div class="exp-logo">
+                <img src="assets/images/satellite-apps-catapult.png" alt="Satellite Applications Catapult" onerror="this.style.display='none'">
+            </div>
+            <div class="exp-info">
+                <div class="exp-company">
+                    <h3>Satellite Applications Catapult</h3>
+                    <span class="exp-position">Project Manager</span>
+                </div>
+                <div class="exp-date-location">
+                    <p><strong>Current (2023-)<br>London, UK</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="exp-card">
+            <div class="exp-logo">
+                <img src="assets/images/hybrid-rocket-lab.png" alt="Hybrid Rocket Lab" onerror="this.style.display='none'">
+            </div>
+            <div class="exp-info">
+                <div class="exp-company">
+                    <h3>Hybrid Rocket Lab</h3>
+                    <span class="exp-position">Research Intern</span>
+                </div>
+                <div class="exp-date-location">
+                    <p><strong>2023-Present<br>Fuel Grain Design & Static-Fire Testing</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="exp-card">
+            <div class="exp-logo">
+                <img src="assets/images/cad-design-solutions.png" alt="CAD Design Solutions" onerror="this.style.display='none'">
+            </div>
+            <div class="exp-info">
+                <div class="exp-company">
+                    <h3>CAD Design Solutions</h3>
+                    <span class="exp-position">CAD Design Engineer</span>
+                </div>
+                <div class="exp-date-location">
+                    <p><strong>2021-2023<br>90+ Projects | CSWP Certified</strong></p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="projects">
