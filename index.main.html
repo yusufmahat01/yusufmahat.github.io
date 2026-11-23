@@ -1,0 +1,2781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Muhammad Yusuf Bin Mahat | Aerospace & Propulsion Engineer Portfolio</title>
+    <meta name="description" content="Aerospace & Mechanical Engineer specializing in Hybrid Rocket Propulsion R&D, SolidWorks (CSWP), ANSYS Simulation, and IIUM Rocket Team Captain.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/jpeg" href="images/yusuf_profile.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Base Webflow CSS from Kumar template -->
+    <link href="css/yashkumar.webflow.shared.06f39caef.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom Modern Styling & Interactivity Overrides -->
+    <style>
+        :root {
+            --primary: #1d4ed8;
+            --primary-hover: #1e40af;
+            --primary-light: #eff6ff;
+            --accent: #2563eb;
+            --accent-glow: rgba(37, 99, 235, 0.25);
+            --dark: #0f172a;
+            --slate-800: #1e293b;
+            --slate-600: #475569;
+            --slate-400: #94a3b8;
+            --slate-200: #e2e8f0;
+            --slate-100: #f1f5f9;
+            --slate-50: #f8fafc;
+            --white: #ffffff;
+            --gold: #d97706;
+            --gold-bg: #fef3c7;
+            --dummy-border: #f59e0b;
+            --dummy-bg: #fffbeb;
+        }
+
+        /* Ensure Webflow's opacity loading state doesn't hide content */
+        body, html {
+            opacity: 1 !important;
+            margin: 0;
+            padding: 0;
+            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #fafbfc;
+            color: #1e293b;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, .heading, .heading-3, .heading-4, .edu-head {
+            font-family: 'Josefin Sans', sans-serif !important;
+            letter-spacing: -0.5px;
+        }
+
+        /* Sticky Modern Navigation */
+        .site-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 72px;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            transition: all 0.3s ease;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--dark);
+        }
+
+        .nav-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent);
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-avatar:hover {
+            transform: scale(1.08) rotate(4deg);
+        }
+
+        .nav-name-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav-name {
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--dark);
+            letter-spacing: -0.3px;
+        }
+
+        .nav-status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.75rem;
+            color: #16a34a;
+            font-weight: 600;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            background-color: #16a34a;
+            border-radius: 50%;
+            animation: pulseDot 2s infinite;
+        }
+
+        @keyframes pulseDot {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(22, 163, 74, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 1.8rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--slate-600);
+            font-size: 0.95rem;
+            font-weight: 500;
+            position: relative;
+            padding: 6px 0;
+            transition: color 0.2s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--primary);
+            color: var(--white) !important;
+            padding: 8px 18px !important;
+            border-radius: 8px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
+            transition: all 0.3s ease !important;
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(29, 78, 216, 0.35);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            color: var(--dark);
+            cursor: pointer;
+        }
+
+        /* Modernized Hero Section */
+        .hero {
+            padding-top: 130px !important;
+            padding-bottom: 70px !important;
+            background: radial-gradient(circle at 50% 20%, #f1f5f9 0%, #fafbfc 100%) !important;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, rgba(255,255,255,0) 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hero-badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 9999px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #334155;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            margin-bottom: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .hero-badge-pill:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px var(--accent-glow);
+        }
+
+        .hero-badge-pill span.icon {
+            color: var(--accent);
+        }
+
+        .heading-3 {
+            font-family: 'Josefin Sans', sans-serif !important;
+            font-size: 1.25rem !important;
+            text-transform: uppercase !important;
+            letter-spacing: 2px !important;
+            color: var(--accent) !important;
+            font-weight: 700 !important;
+            margin-bottom: 12px !important;
+        }
+
+        .heading {
+            font-family: 'Josefin Sans', sans-serif !important;
+            font-size: 3.8rem !important;
+            font-weight: 800 !important;
+            color: var(--dark) !important;
+            line-height: 1.1 !important;
+            margin-bottom: 16px !important;
+            letter-spacing: -1.5px !important;
+        }
+
+        .hero-title-role {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--slate-800);
+            margin-bottom: 8px;
+        }
+
+        .hero-tagline {
+            font-size: 1.1rem;
+            color: var(--slate-600);
+            max-width: 720px;
+            margin: 0 auto 28px;
+            line-height: 1.6;
+        }
+
+        /* Hero Social Bar */
+        .hero-social-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 35px;
+        }
+
+        .social-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: #ffffff;
+            border: 1px solid var(--slate-200);
+            border-radius: 8px;
+            color: var(--slate-800);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.25s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .social-chip i {
+            font-size: 1.1rem;
+            color: var(--accent);
+            transition: transform 0.2s ease;
+        }
+
+        .social-chip:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.15);
+        }
+
+        .social-chip:hover i {
+            transform: scale(1.15);
+        }
+
+        /* Hero Button Grid */
+        .hero-btn-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            max-width: 920px;
+            margin: 0 auto 40px;
+        }
+
+        .modern-hero-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 18px;
+            background: #ffffff;
+            border: 1.5px solid var(--slate-200);
+            border-radius: 10px;
+            color: var(--slate-800);
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
+            cursor: pointer;
+        }
+
+        .modern-hero-btn i {
+            font-size: 1rem;
+            color: var(--accent);
+            transition: transform 0.3s ease;
+        }
+
+        .modern-hero-btn:hover {
+            border-color: var(--accent);
+            background: var(--primary-light);
+            color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.18);
+        }
+
+        .modern-hero-btn:hover i {
+            transform: translateX(3px);
+        }
+
+        .modern-hero-btn.btn-featured {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        .modern-hero-btn.btn-featured i {
+            color: var(--white);
+        }
+
+        .modern-hero-btn.btn-featured:hover {
+            background: var(--primary-hover);
+            border-color: var(--primary-hover);
+            color: var(--white);
+            box-shadow: 0 8px 24px rgba(29, 78, 216, 0.35);
+        }
+
+        /* KPI Quick Metrics Bar */
+        .metrics-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            max-width: 960px;
+            margin: 20px auto 0;
+            padding: 22px 28px;
+            background: #ffffff;
+            border-radius: 14px;
+            border: 1px solid var(--slate-200);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+        }
+
+        .metric-item {
+            text-align: center;
+            border-right: 1px solid var(--slate-200);
+            padding: 0 12px;
+        }
+
+        .metric-item:last-child {
+            border-right: none;
+        }
+
+        .metric-number {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 2.1rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.1;
+        }
+
+        .metric-label {
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--slate-600);
+            margin-top: 4px;
+        }
+
+        /* Section Headings */
+        .section-header {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 45px;
+        }
+
+        .section-tag {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            color: var(--accent);
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .heading-4 {
+            font-family: 'Josefin Sans', sans-serif !important;
+            font-size: 2.5rem !important;
+            font-weight: 700 !important;
+            color: var(--dark) !important;
+            margin-bottom: 12px !important;
+            letter-spacing: -0.5px !important;
+        }
+
+        .section-desc {
+            color: var(--slate-600);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        /* Technical Software Stack (Kumar style + modern elevation) */
+        .technical {
+            padding: 70px 0 !important;
+            background: #ffffff;
+            border-top: 1px solid var(--slate-200);
+            border-bottom: 1px solid var(--slate-200);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .tech-card {
+            background: var(--slate-50);
+            border: 1px solid var(--slate-200);
+            border-radius: 12px;
+            padding: 20px 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            height: 120px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--slate-800);
+        }
+
+        .tech-card img {
+            max-height: 52px;
+            max-width: 85%;
+            object-fit: contain;
+            filter: grayscale(15%);
+            transition: all 0.3s ease;
+        }
+
+        .tech-card .tech-fallback-icon {
+            font-size: 2.2rem;
+            color: var(--primary);
+        }
+
+        .tech-card span {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--slate-600);
+            text-align: center;
+        }
+
+        .tech-card:hover {
+            border-color: var(--accent);
+            background: #ffffff;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
+        }
+
+        .tech-card:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.08);
+        }
+
+        .tech-card:hover span {
+            color: var(--accent);
+        }
+
+        /* Core Competency Domain Matrix */
+        .competency-section {
+            padding: 80px 0;
+            background: #fafbfc;
+        }
+
+        .competency-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .comp-card {
+            background: #ffffff;
+            border: 1px solid var(--slate-200);
+            border-radius: 14px;
+            padding: 30px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comp-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .comp-card:hover {
+            transform: translateY(-4px);
+            border-color: #cbd5e1;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.07);
+        }
+
+        .comp-card:hover::before {
+            opacity: 1;
+        }
+
+        .comp-icon-box {
+            width: 52px;
+            height: 52px;
+            border-radius: 10px;
+            background: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 18px;
+        }
+
+        .comp-title {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+
+        .comp-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .comp-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 0.92rem;
+            color: var(--slate-600);
+            line-height: 1.5;
+        }
+
+        .comp-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 0.95rem;
+        }
+
+        /* Projects Section with Interactive Tabs & Cards */
+        .key-projects {
+            padding: 90px 0 !important;
+            background: #ffffff;
+            border-top: 1px solid var(--slate-200);
+        }
+
+        .project-filter-bar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            background: var(--slate-100);
+            border: 1px solid var(--slate-200);
+            border-radius: 9999px;
+            padding: 8px 20px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--slate-600);
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .proj-card {
+            background: #ffffff;
+            border: 1px solid var(--slate-200);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+
+        .proj-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: 0 16px 36px rgba(37, 99, 235, 0.12);
+        }
+
+        .proj-banner {
+            height: 190px;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+
+        .proj-banner::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.75) 100%);
+        }
+
+        .proj-badge-top {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(4px);
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .proj-badge-top.gold-badge {
+            background: #fef3c7;
+            color: #b45309;
+            border: 1px solid #fde68a;
+        }
+
+        .proj-banner-content {
+            position: absolute;
+            bottom: 14px;
+            left: 18px;
+            right: 18px;
+            z-index: 2;
+            color: #ffffff;
+        }
+
+        .proj-banner-content h3 {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1.45rem;
+            font-weight: 700;
+            margin: 0;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .proj-banner-content p {
+            font-size: 0.85rem;
+            color: #e2e8f0;
+            margin: 3px 0 0;
+        }
+
+        .proj-body {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .proj-desc {
+            color: var(--slate-600);
+            font-size: 0.96rem;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .proj-highlight-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .highlight-chip {
+            background: var(--slate-100);
+            color: var(--slate-800);
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid var(--slate-200);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .highlight-chip.metric-chip {
+            background: #ecfdf5;
+            color: #047857;
+            border-color: #a7f3d0;
+        }
+
+        .proj-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 16px;
+            border-top: 1px solid var(--slate-100);
+            margin-top: auto;
+        }
+
+        .proj-action-btn {
+            background: transparent;
+            border: 1.5px solid var(--accent);
+            color: var(--accent);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+        }
+
+        .proj-action-btn:hover {
+            background: var(--accent);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px var(--accent-glow);
+        }
+
+        /* Distinctive Dummy / Placeholder Card Styling */
+        .card-dummy {
+            border: 2px dashed var(--dummy-border) !important;
+            background: var(--dummy-bg) !important;
+        }
+
+        .dummy-badge {
+            background: #f59e0b;
+            color: #ffffff;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Experience Timeline (Kumar .exp-tab modernized) */
+        .experience {
+            padding: 90px 0 !important;
+            background: #fafbfc;
+        }
+
+        .exp-container {
+            max-width: 980px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .exp-card-modern {
+            background: #ffffff;
+            border: 1px solid var(--slate-200);
+            border-radius: 14px;
+            padding: 26px 28px;
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
+            position: relative;
+        }
+
+        .exp-card-modern:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1);
+        }
+
+        .exp-icon-col {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            background: var(--slate-100);
+            border: 1px solid var(--slate-200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: var(--primary);
+            overflow: hidden;
+        }
+
+        .exp-icon-col img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 6px;
+        }
+
+        .exp-main-col {
+            flex: 1;
+        }
+
+        .exp-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .exp-role-title {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin: 0;
+        }
+
+        .exp-company-sub {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .exp-date-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--slate-600);
+            background: var(--slate-100);
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid var(--slate-200);
+        }
+
+        .exp-location-tag {
+            font-size: 0.85rem;
+            color: var(--slate-400);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .exp-bullets {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0 0;
+        }
+
+        .exp-bullets li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 0.94rem;
+            color: var(--slate-600);
+            line-height: 1.55;
+        }
+
+        .exp-bullets li::before {
+            content: '▪';
+            position: absolute;
+            left: 2px;
+            color: var(--accent);
+            font-size: 1.1rem;
+            top: -2px;
+        }
+
+        /* Research & Publications Showcase */
+        .publications-section {
+            padding: 90px 0;
+            background: #ffffff;
+            border-top: 1px solid var(--slate-200);
+        }
+
+        .pub-grid {
+            max-width: 980px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .pub-item {
+            background: var(--slate-50);
+            border: 1px solid var(--slate-200);
+            border-radius: 12px;
+            padding: 20px 24px;
+            transition: all 0.3s ease;
+        }
+
+        .pub-item:hover {
+            border-color: var(--accent);
+            background: #ffffff;
+            box-shadow: 0 6px 18px rgba(37, 99, 235, 0.08);
+        }
+
+        .pub-meta-line {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+
+        .pub-journal-badge {
+            background: #dbeafe;
+            color: #1e40af;
+            font-size: 0.76rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .pub-year {
+            font-size: 0.82rem;
+            color: var(--slate-400);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .pub-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--dark);
+            line-height: 1.45;
+            margin: 0 0 6px;
+        }
+
+        .pub-authors {
+            font-size: 0.88rem;
+            color: var(--slate-600);
+        }
+
+        /* Education & Certifications (Kumar style) */
+        .education {
+            padding: 90px 0 !important;
+            background: #fafbfc;
+            border-top: 1px solid var(--slate-200);
+        }
+
+        .edu-wrapper {
+            max-width: 980px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .edu-card-modern {
+            background: #ffffff;
+            border: 1px solid var(--slate-200);
+            border-radius: 14px;
+            padding: 28px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .edu-card-modern:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: 0 12px 24px rgba(37, 99, 235, 0.1);
+        }
+
+        .edu-inst-logo {
+            width: 52px;
+            height: 52px;
+            border-radius: 10px;
+            background: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .edu-degree {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 6px;
+        }
+
+        .edu-school {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .edu-details {
+            font-size: 0.92rem;
+            color: var(--slate-600);
+            line-height: 1.6;
+        }
+
+        .edu-cgpa-pill {
+            display: inline-block;
+            background: #ecfdf5;
+            color: #047857;
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 3px 10px;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        /* Awards Gallery */
+        .awards-section {
+            padding: 80px 0;
+            background: #ffffff;
+            border-top: 1px solid var(--slate-200);
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .award-tile {
+            background: #ffffff;
+            border: 1px solid var(--slate-200);
+            border-radius: 12px;
+            padding: 24px 20px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+        }
+
+        .award-tile:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            box-shadow: 0 10px 24px rgba(217, 119, 6, 0.15);
+        }
+
+        .award-icon-circle {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--gold-bg);
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin: 0 auto 16px;
+        }
+
+        .award-title {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 6px;
+        }
+
+        .award-sub {
+            font-size: 0.85rem;
+            color: var(--slate-600);
+        }
+
+        /* About Me Section (Matching Kumar past & present split) */
+        .about-me {
+            padding: 90px 0 !important;
+            background: #fafbfc;
+            border-top: 1px solid var(--slate-200);
+        }
+
+        .about-grid-wrapper {
+            max-width: 1080px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text-col p {
+            color: var(--slate-600);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .about-card-col {
+            background: #ffffff;
+            border: 1px solid var(--slate-200);
+            border-radius: 18px;
+            padding: 32px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .about-photo-wrapper {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            border: 4px solid #ffffff;
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.2);
+        }
+
+        .about-photo-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-card-name {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 4px;
+        }
+
+        .about-card-sub {
+            font-size: 0.95rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .about-specs-list {
+            text-align: left;
+            background: var(--slate-50);
+            border-radius: 10px;
+            padding: 16px 20px;
+            font-size: 0.88rem;
+            color: var(--slate-800);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .spec-row span.label {
+            color: var(--slate-400);
+        }
+
+        .spec-row span.val {
+            font-weight: 600;
+        }
+
+        /* Contact & Location Section (Kumar style + interactive form) */
+        .contact-form {
+            padding: 90px 0 !important;
+            background: #ffffff;
+            border-top: 1px solid var(--slate-200);
+        }
+
+        .contact-layout {
+            max-width: 1080px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+        }
+
+        .form-box {
+            background: var(--slate-50);
+            border: 1px solid var(--slate-200);
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--slate-800);
+            margin-bottom: 8px;
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1.5px solid var(--slate-200);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            color: var(--slate-800);
+            background: #ffffff;
+            box-sizing: border-box;
+            transition: all 0.2s ease;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-dispatch {
+            width: 100%;
+            padding: 14px;
+            background: var(--primary);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 14px rgba(29, 78, 216, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-dispatch:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(29, 78, 216, 0.35);
+        }
+
+        .form-feedback {
+            display: none;
+            margin-top: 16px;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .form-feedback.success {
+            background: #ecfdf5;
+            color: #065f46;
+            border: 1px solid #a7f3d0;
+        }
+
+        /* Location Card & Direct Socials */
+        .location-info-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .location-card {
+            background: var(--slate-50);
+            border: 1px solid var(--slate-200);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            margin-bottom: 24px;
+        }
+
+        .location-map-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--slate-200);
+        }
+
+        .location-card-content {
+            padding: 24px;
+        }
+
+        .loc-title {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .loc-text {
+            color: var(--slate-600);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .direct-chat-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .direct-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.25s ease;
+        }
+
+        .direct-btn.linkedin-btn {
+            background: #0077b5;
+            color: #ffffff;
+        }
+
+        .direct-btn.email-btn {
+            background: var(--slate-800);
+            color: #ffffff;
+        }
+
+        .direct-btn:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 50px 0 !important;
+            background: var(--dark) !important;
+            color: var(--slate-400);
+            text-align: center;
+        }
+
+        .footer-quote {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1.25rem;
+            color: #ffffff;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .footer-copy {
+            font-size: 0.88rem;
+            color: var(--slate-400);
+        }
+
+        /* Modal Popup System (Matching Kumar .pop-up) */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(8px);
+            z-index: 99999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-box {
+            background: #ffffff;
+            border-radius: 18px;
+            max-width: 680px;
+            width: 100%;
+            max-height: 88vh;
+            overflow-y: auto;
+            padding: 36px;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+            transform: translateY(20px);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .modal-overlay.active .modal-box {
+            transform: translateY(0);
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--slate-100);
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--slate-600);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .modal-close-btn:hover {
+            background: #fee2e2;
+            color: #ef4444;
+        }
+
+        .modal-tag {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--accent);
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .modal-title {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 16px;
+        }
+
+        .modal-body-content p {
+            color: var(--slate-600);
+            font-size: 0.98rem;
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+
+        .modal-metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            background: var(--slate-50);
+            padding: 16px;
+            border-radius: 10px;
+            border: 1px solid var(--slate-200);
+            margin: 18px 0;
+        }
+
+        .modal-metric-cell strong {
+            display: block;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .modal-metric-cell span {
+            font-size: 0.8rem;
+            color: var(--slate-600);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 991px) {
+            .heading { font-size: 3rem !important; }
+            .hero-btn-grid { grid-template-columns: repeat(2, 1fr); }
+            .metrics-strip { grid-template-columns: repeat(2, 1fr); row-gap: 20px; }
+            .metric-item:nth-child(2) { border-right: none; }
+            .tech-grid { grid-template-columns: repeat(3, 1fr); }
+            .competency-grid { grid-template-columns: 1fr; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .about-grid-wrapper { grid-template-columns: 1fr; }
+            .contact-layout { grid-template-columns: 1fr; }
+            .edu-wrapper { grid-template-columns: 1fr; }
+            .awards-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 767px) {
+            .site-nav { padding: 0 4%; }
+            .mobile-toggle { display: block; }
+            .nav-menu {
+                position: fixed;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: #ffffff;
+                flex-direction: column;
+                padding: 24px 5%;
+                border-bottom: 1px solid var(--slate-200);
+                box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+                display: none;
+                gap: 1.2rem;
+            }
+            .nav-menu.open { display: flex; }
+            .heading { font-size: 2.3rem !important; }
+            .hero-btn-grid { grid-template-columns: 1fr; }
+            .metrics-strip { grid-template-columns: 1fr; }
+            .metric-item { border-right: none; border-bottom: 1px solid var(--slate-200); padding-bottom: 12px; }
+            .metric-item:last-child { border-bottom: none; }
+            .tech-grid { grid-template-columns: repeat(2, 1fr); }
+            .awards-grid { grid-template-columns: 1fr; }
+            .exp-card-modern { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="site-nav">
+        <a href="#home" class="nav-brand">
+            <img src="images/yusuf_profile.jpg" alt="Muhammad Yusuf" class="nav-avatar">
+            <div class="nav-name-group">
+                <span class="nav-name">Yusuf Mahat</span>
+                <span class="nav-status"><span class="status-dot"></span> Open for Roles</span>
+            </div>
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#competencies" class="nav-link">Competencies</a></li>
+            <li><a href="#tech-stack" class="nav-link">Software Stack</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#publications" class="nav-link">Publications</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li>
+                <a href="https://linkedin.com/in/yusufmahat" target="_blank" class="nav-link nav-cta">
+                    <i class="fab fa-linkedin"></i> Connect
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section (Kumar-Inspired with Modern Elevation) -->
+    <header class="hero" id="home">
+        <div class="w-container" style="text-align: center; position: relative; z-index: 2;">
+
+            <!-- Live Status Pill -->
+            <div class="hero-badge-pill">
+                <span class="icon">🚀</span>
+                <span>IIUM TEKNOFEST Captain 2026 · 3x Gold Medal Winner MRC · CSWP Certified</span>
+            </div>
+
+            <!-- Pre-title Heading -->
+            <h1 class="heading-3">Aerospace &amp; Propulsion Engineering Portfolio</h1>
+
+            <!-- Main Name Heading -->
+            <h2 class="heading">Muhammad Yusuf Bin Mahat</h2>
+
+            <!-- Role Subtitle -->
+            <div class="hero-title-role">
+                Aerospace &amp; Mechanical Engineer (BEng Honours)
+            </div>
+
+            <!-- Concise Tagline / Mission -->
+            <p class="hero-tagline">
+                Specialized in <strong>Hybrid Rocket Propulsion R&D</strong>, fuel grain regression rate optimization, static-fire test stand instrumentation, and production-grade CAD &amp; FEA/CFD modeling.
+            </p>
+
+            <!-- Quick Contact / Social Chips -->
+            <div class="hero-social-row">
+                <a href="mailto:yusufmahat01@gmail.com" class="social-chip">
+                    <i class="fas fa-envelope"></i>
+                    <span>yusufmahat01@gmail.com</span>
+                </a>
+                <a href="https://linkedin.com/in/yusufmahat" target="_blank" class="social-chip">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn Profile</span>
+                </a>
+                <a href="tel:+60143874773" class="social-chip">
+                    <i class="fas fa-phone"></i>
+                    <span>+60 14-387 4773</span>
+                </a>
+                <span class="social-chip" style="cursor: default;">
+                    <i class="fas fa-location-dot"></i>
+                    <span>Sendayan, Malaysia</span>
+                </span>
+            </div>
+
+            <!-- 4 Interactive Hero Buttons (Kumar style) -->
+            <div class="hero-btn-grid">
+                <a href="#projects" class="modern-hero-btn btn-featured">
+                    <i class="fas fa-rocket"></i>
+                    <span>Rocket Projects</span>
+                </a>
+                <a href="#experience" class="modern-hero-btn">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Work Experience</span>
+                </a>
+                <a href="#publications" class="modern-hero-btn">
+                    <i class="fas fa-book-open"></i>
+                    <span>6x Publications</span>
+                </a>
+                <a href="#contact" class="modern-hero-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Get in Touch</span>
+                </a>
+            </div>
+
+            <!-- Key Performance Indicators / Metrics Strip -->
+            <div class="metrics-strip">
+                <div class="metric-item">
+                    <div class="metric-number">6</div>
+                    <div class="metric-label">Peer-Reviewed Papers</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-number">3x</div>
+                    <div class="metric-label">Gold Medals (MRC)</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-number">+200%</div>
+                    <div class="metric-label">Grain Strength Gain</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-number">CSWP</div>
+                    <div class="metric-label">Certified SolidWorks</div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Technical Software & Engineering Toolchain (Kumar .technical layout) -->
+    <section class="technical" id="tech-stack">
+        <div class="w-container">
+            <div class="section-header">
+                <span class="section-tag">Engineering Toolchain</span>
+                <h3 class="heading-4">Technical Software &amp; Tools</h3>
+                <p class="section-desc">Industry-standard simulation, CAD modeling, numerical computing, and propulsion analysis software utilized in research &amp; production environments.</p>
+            </div>
+
+            <div class="tech-grid">
+                <!-- ANSYS -->
+                <div class="tech-card" title="ANSYS Fluent & Static Structural (CFD & FEA)">
+                    <img src="images/611285dd4aff54e495df3625_ansys-logo-png-4-Transparent-Images-Free.png" alt="ANSYS">
+                    <span>ANSYS Fluent / FEA</span>
+                </div>
+
+                <!-- SolidWorks -->
+                <div class="tech-card" title="SolidWorks Professional (CSWP & CSWA Certified)">
+                    <div class="tech-fallback-icon"><i class="fas fa-cube"></i></div>
+                    <span>SolidWorks (CSWP)</span>
+                </div>
+
+                <!-- OpenRocket -->
+                <div class="tech-card" title="OpenRocket 6DOF Sounding Rocket Trajectory Simulator">
+                    <img src="images/611285ddc50c617efad19a51_OpenRocket.png" alt="OpenRocket">
+                    <span>OpenRocket Sim</span>
+                </div>
+
+                <!-- MATLAB Simulink -->
+                <div class="tech-card" title="MATLAB & Simulink Numerical Analysis">
+                    <img src="images/611285ddc50c614aafd19a52_matlab-simulink.png" alt="MATLAB Simulink">
+                    <span>MATLAB / Simulink</span>
+                </div>
+
+                <!-- AutoCAD -->
+                <div class="tech-card" title="AutoCAD 2D Drafting & Production Schematics">
+                    <img src="images/611285dd7c02cf29c6fd4f5f_AutoCAD-Logo.png" alt="AutoCAD">
+                    <span>AutoCAD</span>
+                </div>
+
+                <!-- Fusion 360 & Onshape -->
+                <div class="tech-card" title="Autodesk Fusion 360 & Onshape Cloud CAD">
+                    <img src="images/611285dd9faddde47d61868d_fusion-360-lockup-stacked-screen-e1587051098338-1024x505.png" alt="Fusion 360">
+                    <span>Fusion 360 / Onshape</span>
+                </div>
+
+                <!-- Python & C++ -->
+                <div class="tech-card" title="Python Data Analysis & C++/Arduino Avionics Firmware">
+                    <div class="tech-fallback-icon"><i class="fab fa-python"></i></div>
+                    <span>Python &amp; C++</span>
+                </div>
+
+                <!-- XFOIL -->
+                <div class="tech-card" title="XFOIL Aerodynamic Airfoil Profiling">
+                    <div class="tech-fallback-icon"><i class="fas fa-wind"></i></div>
+                    <span>XFOIL Aero</span>
+                </div>
+
+                <!-- FDM 3D Printing -->
+                <div class="tech-card" title="Additive Manufacturing: FDM PLA / Composite Layup">
+                    <div class="tech-fallback-icon"><i class="fas fa-layer-group"></i></div>
+                    <span>FDM 3D Printing</span>
+                </div>
+
+                <!-- Telemetry & LoRa -->
+                <div class="tech-card" title="ESP32 & LoRa Long-Range Telemetry Systems">
+                    <div class="tech-fallback-icon"><i class="fas fa-satellite-dish"></i></div>
+                    <span>LoRa &amp; ESP32</span>
+                </div>
+
+                <!-- CAAM CAMO Standards -->
+                <div class="tech-card" title="Civil Aviation Authority Airworthiness & CAMO Compliance">
+                    <img src="images/611285ddc50c613305d19a53_pngfind.com-caa-logo-png-4498552.png" alt="Civil Aviation Compliance">
+                    <span>Airworthiness / CAMO</span>
+                </div>
+
+                <!-- STK 10 -->
+                <div class="tech-card" title="Systems Tool Kit (STK 10) Orbital & Trajectory Analysis">
+                    <div class="tech-fallback-icon"><i class="fas fa-globe"></i></div>
+                    <span>STK 10</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Competencies Matrix -->
+    <section class="competency-section" id="competencies">
+        <div class="w-container">
+            <div class="section-header">
+                <span class="section-tag">Engineering Disciplines</span>
+                <h3 class="heading-4">Core Competency Matrix</h3>
+                <p class="section-desc">Hands-on expertise across propulsion design, numerical modeling, advanced manufacturing, and launch operations.</p>
+            </div>
+
+            <div class="competency-grid">
+                <!-- Competency 1 -->
+                <div class="comp-card">
+                    <div class="comp-icon-box"><i class="fas fa-fire-flame-curved"></i></div>
+                    <div class="comp-title">Propulsion &amp; Static Fire R&amp;D</div>
+                    <ul class="comp-list">
+                        <li>Hybrid rocket motor design &amp; paraffin grain geometry optimization</li>
+                        <li>Regression rate characterization &amp; test stand design</li>
+                        <li>CFD nozzle erosion analysis with metallic fuel additives</li>
+                        <li>Solid propellant handling &amp; static fire instrumentation</li>
+                        <li>Full launch operations &amp; flight readiness clearance</li>
+                    </ul>
+                </div>
+
+                <!-- Competency 2 -->
+                <div class="comp-card">
+                    <div class="comp-icon-box"><i class="fas fa-drafting-compass"></i></div>
+                    <div class="comp-title">CAD, Simulation &amp; FEA/CFD</div>
+                    <ul class="comp-list">
+                        <li>SolidWorks Certified Professional (CSWP) &amp; Associate (CSWA)</li>
+                        <li>ANSYS Fluent: compressible supersonic flow &amp; nozzle thermodynamics</li>
+                        <li>ANSYS Static Structural: thermal stress &amp; pressure vessel cases</li>
+                        <li>Aerodynamic sounding rocket simulation in OpenRocket &amp; XFOIL</li>
+                        <li>Production-ready weldment, sheet metal &amp; GD&amp;T drawings</li>
+                    </ul>
+                </div>
+
+                <!-- Competency 3 -->
+                <div class="comp-card">
+                    <div class="comp-icon-box"><i class="fas fa-microchip"></i></div>
+                    <div class="comp-title">Manufacturing, Avionics &amp; Systems</div>
+                    <ul class="comp-list">
+                        <li>FDM additive manufacturing with high-strength structural skeletons</li>
+                        <li>Composite wet layup (fiberglass/epoxy airframe fabrication)</li>
+                        <li>ESP32 &amp; LoRa telemetry systems for sounding rocket flight data</li>
+                        <li>CAMO airworthiness records &amp; CAAM compliance verification</li>
+                        <li>Engineering project leadership &amp; multi-institution STEM mentorship</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Projects Section (Kumar .key-projects + Interactive Filter Tabs & Modal) -->
+    <section class="key-projects" id="projects">
+        <div class="w-container">
+            <div class="section-header">
+                <span class="section-tag">Featured Engineering Work</span>
+                <h3 class="heading-4">Key Projects &amp; Research</h3>
+                <p class="section-desc">A selection of hybrid propulsion research, national &amp; international competition sounding rockets, and production engineering projects.</p>
+            </div>
+
+            <!-- Project Filter Tabs -->
+            <div class="project-filter-bar">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="propulsion">Propulsion R&amp;D</button>
+                <button class="filter-btn" data-filter="competition">Rocket Competitions</button>
+                <button class="filter-btn" data-filter="cad">CAD &amp; Production</button>
+                <button class="filter-btn" data-filter="stem">STEM Outreach</button>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- Project 1: Final Year Project -->
+                <div class="proj-card" data-category="propulsion">
+                    <div class="proj-banner" style="background-image: url('images/61129d18cd4f3ff6355d97c8_127234.jpg');">
+                        <span class="proj-badge-top">Lead Researcher · IIUM</span>
+                        <div class="proj-banner-content">
+                            <h3>Hybrid Rocket Fuel Grain Research</h3>
+                            <p>Oct 2023 – Aug 2024 · IIUM Propulsion Lab</p>
+                        </div>
+                    </div>
+                    <div class="proj-body">
+                        <p class="proj-desc">
+                            Designed and static-fire tested a PLA nested skeleton structural reinforcement for paraffin hybrid rocket fuel grains using SolidWorks and ANSYS Static Structural. Solved the classic brittleness and structural slumping issues in paraffin grains.
+                        </p>
+                        <div class="proj-highlight-strip">
+                            <span class="highlight-chip metric-chip"><i class="fas fa-arrow-up"></i> +200% Strength</span>
+                            <span class="highlight-chip metric-chip"><i class="fas fa-bolt"></i> +40% Efficiency</span>
+                            <span class="highlight-chip">SolidWorks FEA</span>
+                            <span class="highlight-chip">ANSYS Structural</span>
+                        </div>
+                        <div class="proj-footer">
+                            <span style="font-size: 0.85rem; color: var(--slate-400); font-family: 'JetBrains Mono', monospace;">FYP-PRO-01</span>
+                            <button class="proj-action-btn" onclick="openModal('modal-fyp')">
+                                <span>View Details</span> <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: TEKNOFEST Rocket -->
+                <div class="proj-card" data-category="competition">
+                    <div class="proj-banner" style="background-image: url('images/6112cb6ba5fb4ca7d3a99481_bmfa-payload-challenge-big.jpg');">
+                        <span class="proj-badge-top">Team Captain (2026)</span>
+                        <div class="proj-banner-content">
+                            <h3>TEKNOFEST International Rocket</h3>
+                            <p>2024 – 2026 · Category A4 International</p>
+                        </div>
+                    </div>
+                    <div class="proj-body">
+                        <p class="proj-desc">
+                            Led aerodynamic design, trajectory analysis, and structural simulation for the IIUM team sounding rocket. Successfully cleared the rigorous Launch Readiness Review (LRR) by international aerospace evaluators. Currently captaining the team through Critical Design Review (CDR) for TEKNOFEST 2026.
+                        </p>
+                        <div class="proj-highlight-strip">
+                            <span class="highlight-chip metric-chip"><i class="fas fa-check-circle"></i> Cleared LRR</span>
+                            <span class="highlight-chip">OpenRocket 6DOF</span>
+                            <span class="highlight-chip">ANSYS Fluent</span>
+                            <span class="highlight-chip">Carbon / Glass Layup</span>
+                        </div>
+                        <div class="proj-footer">
+                            <span style="font-size: 0.85rem; color: var(--slate-400); font-family: 'JetBrains Mono', monospace;">TEKNO-A4</span>
+                            <button class="proj-action-btn" onclick="openModal('modal-tekno')">
+                                <span>View Details</span> <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Malaysia Rocket Competition -->
+                <div class="proj-card" data-category="competition">
+                    <div class="proj-banner" style="background-image: url('images/61129c4e9faddd67ed62122b_nasa-Q1p7bh3SHj8-unsplash.jpg');">
+                        <span class="proj-badge-top gold-badge">🥇 3x Gold &amp; 1x Silver</span>
+                        <div class="proj-banner-content">
+                            <h3>Malaysia Rocket Competition (MRC)</h3>
+                            <p>2024, 2025, 2026 · Design, Simulation &amp; Launch</p>
+                        </div>
+                    </div>
+                    <div class="proj-body">
+                        <p class="proj-desc">
+                            Directed complete rocket lifecycle across 3 consecutive national competitions: motor grain sizing, stability margin calculation, structural fabrication, recovery ejection, and launch pad operations. Secured 1st place in 1KM and CanSat categories.
+                        </p>
+                        <div class="proj-highlight-strip">
+                            <span class="highlight-chip metric-chip"><i class="fas fa-trophy"></i> Gold 2024, 2025, 2026</span>
+                            <span class="highlight-chip">1KM Apogee</span>
+                            <span class="highlight-chip">CanSat Deployment</span>
+                            <span class="highlight-chip">Dual Ejection</span>
+                        </div>
+                        <div class="proj-footer">
+                            <span style="font-size: 0.85rem; color: var(--slate-400); font-family: 'JetBrains Mono', monospace;">MRC-CHAMP</span>
+                            <button class="proj-action-btn" onclick="openModal('modal-mrc')">
+                                <span>View Details</span> <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: STEM Solid Rocket Motor Program -->
+                <div class="proj-card" data-category="stem">
+                    <div class="proj-banner" style="background-image: url('images/611286b30d959ad6c5f279c6_photo-1446776877081-d282a0f896e2.jpeg');">
+                        <span class="proj-badge-top">Project Lead &amp; Mentor</span>
+                        <div class="proj-banner-content">
+                            <h3>STEM Solid Rocket Motor Initiative</h3>
+                            <p>2024 – 2026 · IIUM Rocket Lab / MTC Defence / Qretive Lab</p>
+                        </div>
+                    </div>
+                    <div class="proj-body">
+                        <p class="proj-desc">
+                            Spearheaded industry-academia collaborative training delivering hands-on rocket propulsion education to over 30 university and pre-university engineering students. Topics spanned solid propellant chemistry, nozzle design, and 3D printed motor casings.
+                        </p>
+                        <div class="proj-highlight-strip">
+                            <span class="highlight-chip metric-chip"><i class="fas fa-users"></i> 30+ Students</span>
+                            <span class="highlight-chip">MTC Defence Partner</span>
+                            <span class="highlight-chip">Hands-on Static Fire</span>
+                        </div>
+                        <div class="proj-footer">
+                            <span style="font-size: 0.85rem; color: var(--slate-400); font-family: 'JetBrains Mono', monospace;">STEM-MTC</span>
+                            <button class="proj-action-btn" onclick="openModal('modal-stem')">
+                                <span>View Details</span> <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Production CAD Engineering (Oldenburger & Freelance) -->
+                <div class="proj-card" data-category="cad">
+                    <div class="proj-banner" style="background-image: url('images/cad_manufacturing_banner.jpeg');">
+                        <span class="proj-badge-top">Production &amp; Fabrication</span>
+                        <div class="proj-banner-content">
+                            <h3>Production CAD &amp; 3D Print Engineering</h3>
+                            <p>2024 – Present · SolidWorks CSWP</p>
+                        </div>
+                    </div>
+                    <div class="proj-body">
+                        <p class="proj-desc">
+                            Engineered 40+ parametric SolidWorks assemblies, sheet metal enclosures, and weldment structural frames with production GD&amp;T drawings. Ran a freelance storefront with 50+ custom functional 3D printable engineering models from brief to QC.
+                        </p>
+                        <div class="proj-highlight-strip">
+                            <span class="highlight-chip metric-chip">90+ Total Models</span>
+                            <span class="highlight-chip">Sheet Metal</span>
+                            <span class="highlight-chip">Weldments</span>
+                            <span class="highlight-chip">FDM Production</span>
+                        </div>
+                        <div class="proj-footer">
+                            <span style="font-size: 0.85rem; color: var(--slate-400); font-family: 'JetBrains Mono', monospace;">CAD-PROD</span>
+                            <button class="proj-action-btn" onclick="openModal('modal-cad')">
+                                <span>View Details</span> <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: DUMMY / EDITABLE PLACEHOLDER PROJECT -->
+                <div class="proj-card card-dummy" data-category="cad">
+                    <div class="proj-banner" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);">
+                        <span class="proj-badge-top dummy-badge"><i class="fas fa-pen-to-square"></i> Editable Placeholder</span>
+                        <div class="proj-banner-content" style="color: #78350f;">
+                            <h3 style="color: #78350f; text-shadow: none;">[Your Next Major Project]</h3>
+                            <p style="color: #92400e;">Click to replace with your additional project details</p>
+                        </div>
+                    </div>
+                    <div class="proj-body">
+                        <p class="proj-desc" style="color: #92400e;">
+                            <strong>[DUMMY PLACEHOLDER]:</strong> This card is pre-configured for you to add your future propulsion test stand, flight computer avionics, or specialized SolidWorks assembly project. Easily edit the text in <code>index.main.html</code>.
+                        </p>
+                        <div class="proj-highlight-strip">
+                            <span class="highlight-chip" style="background: #fef3c7; color: #b45309; border-color: #fde68a;">[Placeholder Metric]</span>
+                            <span class="highlight-chip" style="background: #fef3c7; color: #b45309; border-color: #fde68a;">[Custom Tool 1]</span>
+                            <span class="highlight-chip" style="background: #fef3c7; color: #b45309; border-color: #fde68a;">[Custom Tool 2]</span>
+                        </div>
+                        <div class="proj-footer">
+                            <span style="font-size: 0.85rem; color: #b45309; font-family: 'JetBrains Mono', monospace;">DUMMY-SLOT-01</span>
+                            <button class="proj-action-btn" style="border-color: #d97706; color: #b45309;" onclick="openModal('modal-dummy')">
+                                <span>Edit Preview</span> <i class="fas fa-pen"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Research & Publications Section (Direct from Resume) -->
+    <section class="publications-section" id="publications">
+        <div class="w-container">
+            <div class="section-header">
+                <span class="section-tag">Academic Output</span>
+                <h3 class="heading-4">Research &amp; Publications</h3>
+                <p class="section-desc">Six peer-reviewed journal papers and conference proceedings focusing on hybrid rocket propulsion, PLA nested grain regression, and nozzle erosion CFD.</p>
+            </div>
+
+            <div class="pub-grid">
+
+                <!-- JoAAA Paper 1 -->
+                <div class="pub-item">
+                    <div class="pub-meta-line">
+                        <span class="pub-journal-badge">Journal (JoAAA)</span>
+                        <span class="pub-year">Peer-Reviewed</span>
+                        <span style="font-size: 0.8rem; color: var(--accent); font-weight: 600;">Journal of Aeronautics, Astronautics and Aviation</span>
+                    </div>
+                    <h4 class="pub-title">Investigation on the Regression Rate of Additively Manufactured PLA Nested Skeleton for Hybrid Rocket Motor</h4>
+                    <div class="pub-authors">M. Yusuf Bin Mahat, M. Hanafi Azami, et al.</div>
+                </div>
+
+                <!-- JoAAA Paper 2 -->
+                <div class="pub-item">
+                    <div class="pub-meta-line">
+                        <span class="pub-journal-badge">Journal (JoAAA)</span>
+                        <span class="pub-year">Peer-Reviewed</span>
+                        <span style="font-size: 0.8rem; color: var(--accent); font-weight: 600;">Journal of Aeronautics, Astronautics and Aviation</span>
+                    </div>
+                    <h4 class="pub-title">Analytical Investigation on Regression Rate of 3D-Printed PLA Doped with High Entropy Alloy Additives in Hybrid Rocket Motor</h4>
+                    <div class="pub-authors">M. Yusuf Bin Mahat, M. Hanafi Azami, et al.</div>
+                </div>
+
+                <!-- JoAAA Paper 3 -->
+                <div class="pub-item">
+                    <div class="pub-meta-line">
+                        <span class="pub-journal-badge">Journal (JoAAA)</span>
+                        <span class="pub-year">Peer-Reviewed</span>
+                        <span style="font-size: 0.8rem; color: var(--accent); font-weight: 600;">Journal of Aeronautics, Astronautics and Aviation</span>
+                    </div>
+                    <h4 class="pub-title">Mechanical Characterization of Additively Manufactured PLA Nested Skeleton for Hybrid Rocket Motor</h4>
+                    <div class="pub-authors">M. Yusuf Bin Mahat, M. Hanafi Azami, et al.</div>
+                </div>
+
+                <!-- JoAAA Paper 4 -->
+                <div class="pub-item">
+                    <div class="pub-meta-line">
+                        <span class="pub-journal-badge">Journal (JoAAA)</span>
+                        <span class="pub-year">Peer-Reviewed</span>
+                        <span style="font-size: 0.8rem; color: var(--accent); font-weight: 600;">Journal of Aeronautics, Astronautics and Aviation</span>
+                    </div>
+                    <h4 class="pub-title">Investigation on the Regression Rate and Structural Integrity for Additively Manufactured PLA Nested Skeleton for Hybrid Rocket Motor</h4>
+                    <div class="pub-authors">M. Yusuf Bin Mahat, M. Hanafi Azami, et al.</div>
+                </div>
+
+                <!-- JoAAA Paper 5 -->
+                <div class="pub-item">
+                    <div class="pub-meta-line">
+                        <span class="pub-journal-badge">Journal (JoAAA)</span>
+                        <span class="pub-year">Peer-Reviewed</span>
+                        <span style="font-size: 0.8rem; color: var(--accent); font-weight: 600;">Journal of Aeronautics, Astronautics and Aviation</span>
+                    </div>
+                    <h4 class="pub-title">Effects of Multi-Port Geometries and Metallic Doping on the Combustion Performance of Sustainable PLA Hybrid Rocket Propellants</h4>
+                    <div class="pub-authors">M. Yusuf Bin Mahat, M. Hanafi Azami, et al.</div>
+                </div>
+
+                <!-- AEROS Journal Paper -->
+                <div class="pub-item">
+                    <div class="pub-meta-line">
+                        <span class="pub-journal-badge" style="background: #e0e7ff; color: #3730a3;">Journal (AEROS)</span>
+                        <span class="pub-year">Peer-Reviewed</span>
+                        <span style="font-size: 0.8rem; color: var(--accent); font-weight: 600;">Journal of Aerospace Society Malaysia</span>
+                    </div>
+                    <h4 class="pub-title">CFD-Based Analysis of Nozzle Erosion in Hybrid Rocket Motors with Various Fuel Additives</h4>
+                    <div class="pub-authors">M. Yusuf Bin Mahat, M. Hanafi Azami, et al.</div>
+                </div>
+
+                <!-- IConRISES Conference -->
+                <div class="pub-item">
+                    <div class="pub-meta-line">
+                        <span class="pub-journal-badge" style="background: #fef3c7; color: #92400e;">Conference</span>
+                        <span class="pub-year">IConRISES Proceedings</span>
+                        <span style="font-size: 0.8rem; color: var(--accent); font-weight: 600;">International Conference on Recent Innovations in Sustainable Engineering</span>
+                    </div>
+                    <h4 class="pub-title">Sustainable Dual Thrust Hybrid Rocket Motor Using Polylactic Acid as Sustainer Fuel in Multilayered Tubular Fuel Grain</h4>
+                    <div class="pub-authors">M. Yusuf Bin Mahat, M. Hanafi Azami, et al.</div>
+                </div>
+
+                <!-- STEM Public Article -->
+                <div class="pub-item">
+                    <div class="pub-meta-line">
+                        <span class="pub-journal-badge" style="background: #f1f5f9; color: #475569;">Public Article</span>
+                        <span class="pub-year">e-Estidotmy (2025)</span>
+                    </div>
+                    <h4 class="pub-title">"Teknologi Roket yang Mampu Mengubah Dunia" — STEM Public Science Article</h4>
+                    <div class="pub-authors">M. Yusuf Bin Mahat · Transformative potential of national aerospace and rocket technology</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Engineering Experience (Kumar .exp-tab style) -->
+    <section class="experience" id="experience">
+        <div class="w-container">
+            <div class="section-header">
+                <span class="section-tag">Career History</span>
+                <h3 class="heading-4">Professional Experience</h3>
+                <p class="section-desc">Practical engineering roles spanning precision structural design, aircraft airworthiness oversight, research lab leadership, and independent production.</p>
+            </div>
+
+            <div class="exp-container">
+
+                <!-- Experience 1: Oldenburger Interior -->
+                <div class="exp-card-modern">
+                    <div class="exp-icon-col">
+                        <i class="fas fa-building-user"></i>
+                    </div>
+                    <div class="exp-main-col">
+                        <div class="exp-header-row">
+                            <h4 class="exp-role-title">Technical Engineer</h4>
+                            <span class="exp-date-badge">Aug 2025 – Present</span>
+                        </div>
+                        <div class="exp-company-sub">
+                            <span>Oldenburger Interior Sdn Bhd</span>
+                            <span class="exp-location-tag"><i class="fas fa-map-pin"></i> Sendayan, Negeri Sembilan</span>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li>Developed 40+ detailed engineering production drawings and SolidWorks 3D models adhering to client architectural specifications and production-ready structural design standards, significantly reducing fabrication error rates.</li>
+                            <li>Utilized professional-level SolidWorks (CSWP) to create complex parametric assemblies, sheet metal components, weldment structures, and bill of materials (BOM) for custom fabrication.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 2: IIUM Rocket Team -->
+                <div class="exp-card-modern">
+                    <div class="exp-icon-col" style="background: #eff6ff; color: var(--accent);">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="exp-main-col">
+                        <div class="exp-header-row">
+                            <h4 class="exp-role-title">Team Captain (2026) · Lead Design &amp; Simulation (2024–2025)</h4>
+                            <span class="exp-date-badge">2024 – 2026</span>
+                        </div>
+                        <div class="exp-company-sub">
+                            <span>IIUM Rocket Team (TEKNOFEST &amp; MRC)</span>
+                            <span class="exp-location-tag"><i class="fas fa-map-pin"></i> Gombak, Selangor</span>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li>Serving as Team Captain (2026), leading the multi-disciplinary team through Critical Design Review (CDR) preparation for TEKNOFEST 2026 International (Category A4).</li>
+                            <li>Headed aerodynamic profiling, 3D CAD modeling, and ANSYS structural simulations for 1KM and sounding rockets, winning 3 Gold Medals at Malaysia Rocket Competition (MRC).</li>
+                            <li>Cleared the comprehensive Launch Readiness Review (LRR) conducted by international aerospace evaluators.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 3: Freelance CAD Designer -->
+                <div class="exp-card-modern">
+                    <div class="exp-icon-col">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <div class="exp-main-col">
+                        <div class="exp-header-row">
+                            <h4 class="exp-role-title">Freelance CAD Designer &amp; 3D Printing Specialist</h4>
+                            <span class="exp-date-badge">Oct 2024 – Aug 2025</span>
+                        </div>
+                        <div class="exp-company-sub">
+                            <span>Self-Employed · Shopee Storefront</span>
+                            <span class="exp-location-tag"><i class="fas fa-laptop-code"></i> Remote</span>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li>Designed 50+ custom 3D-printable products and engineering prototypes using SolidWorks, managing the complete workflow from client brief to print-ready STL/STEP files.</li>
+                            <li>Executed in-house FDM production, slicing optimization, mechanical tolerance verification, and quality control.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 4: Aerohandlers CAMO -->
+                <div class="exp-card-modern">
+                    <div class="exp-icon-col">
+                        <i class="fas fa-plane-circle-check"></i>
+                    </div>
+                    <div class="exp-main-col">
+                        <div class="exp-header-row">
+                            <h4 class="exp-role-title">Engineering Intern — CAMO Department</h4>
+                            <span class="exp-date-badge">Jul 2023 – Oct 2023</span>
+                        </div>
+                        <div class="exp-company-sub">
+                            <span>Aerohandlers Sdn Bhd</span>
+                            <span class="exp-location-tag"><i class="fas fa-map-pin"></i> Subang, Selangor</span>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li>Reviewed commercial aircraft engine logbooks and maintenance records for major repair sign-off within a CAMO environment, verifying compliance with Civil Aviation Authority of Malaysia (CAAM) airworthiness directives.</li>
+                            <li>Managed ground support operations for 50+ aircraft movements, maintaining 100% safety protocol compliance throughout.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 5: DUMMY / EDITABLE WORK EXPERIENCE SLOT -->
+                <div class="exp-card-modern card-dummy">
+                    <div class="exp-icon-col" style="background: #fef3c7; color: #b45309; border-color: #fde68a;">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <div class="exp-main-col">
+                        <div class="exp-header-row">
+                            <h4 class="exp-role-title" style="color: #78350f;">[DUMMY / EDITABLE WORK EXPERIENCE]</h4>
+                            <span class="exp-date-badge" style="background: #fef3c7; color: #b45309; border-color: #fde68a;">[Date Range, e.g. 2026–Future]</span>
+                        </div>
+                        <div class="exp-company-sub" style="color: #b45309;">
+                            <span>[Your Next Role / Company Name]</span>
+                            <span class="dummy-badge"><i class="fas fa-marker"></i> Replace with your details later</span>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li style="color: #92400e;"><strong>[Placeholder bullet point]:</strong> As requested, this dummy slot is ready for your additional or updated work experience details once finalized.</li>
+                            <li style="color: #92400e;"><strong>[Placeholder bullet point]:</strong> Detail your future project responsibilities, engineering deliverables, and technical impact here.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications (Kumar .education style) -->
+    <section class="education" id="education">
+        <div class="w-container">
+            <div class="section-header">
+                <span class="section-tag">Academic Background</span>
+                <h3 class="heading-4">Education &amp; Credentials</h3>
+                <p class="section-desc">Rigorous engineering foundation in aerospace systems and professional industry certifications.</p>
+            </div>
+
+            <div class="edu-wrapper">
+
+                <!-- IIUM Bachelor -->
+                <div class="edu-card-modern">
+                    <div>
+                        <div class="edu-inst-logo"><i class="fas fa-graduation-cap"></i></div>
+                        <h4 class="edu-degree">Bachelor of Engineering — Mechanical-Aerospace (Honours)</h4>
+                        <div class="edu-school">International Islamic University Malaysia (IIUM)</div>
+                        <div class="edu-details">
+                            Graduated 2020 – 2024 · Gombak, Selangor<br>
+                            <strong>Relevant Coursework:</strong> Rocket Propulsion, Aerospace Propulsion, Aircraft Structures, Control Systems, Airworthiness, Computational Fluid Dynamics (CFD).
+                        </div>
+                    </div>
+                    <div>
+                        <span class="edu-cgpa-pill"><i class="fas fa-award"></i> CGPA: 3.15 / 4.0</span>
+                    </div>
+                </div>
+
+                <!-- IIUM Foundation -->
+                <div class="edu-card-modern">
+                    <div>
+                        <div class="edu-inst-logo"><i class="fas fa-school"></i></div>
+                        <h4 class="edu-degree">Foundation in Engineering &amp; Computer Sciences</h4>
+                        <div class="edu-school">Centre for Foundation Studies, IIUM</div>
+                        <div class="edu-details">
+                            Completed 2019 – 2020 · Gambang, Pahang<br>
+                            Intensive pre-university foundation covering advanced mathematics, physics, computing principles, and introduction to engineering mechanics.
+                        </div>
+                    </div>
+                    <div>
+                        <span class="edu-cgpa-pill"><i class="fas fa-check"></i> CGPA: 3.01 / 4.0</span>
+                    </div>
+                </div>
+
+                <!-- Dassault CSWP -->
+                <div class="edu-card-modern">
+                    <div>
+                        <div class="edu-inst-logo" style="background: #fef2f2; color: #dc2626;"><i class="fas fa-certificate"></i></div>
+                        <h4 class="edu-degree">CSWP — SolidWorks Certified Professional</h4>
+                        <div class="edu-school">Dassault Systèmes</div>
+                        <div class="edu-details">
+                            Demonstrated advanced expertise in parametric part modeling, complex assembly management, design modifications, and structural configuration.
+                        </div>
+                    </div>
+                    <div>
+                        <span class="edu-cgpa-pill" style="background: #fef2f2; color: #dc2626;"><i class="fas fa-shield-halved"></i> Globally Verified Professional</span>
+                    </div>
+                </div>
+
+                <!-- Dassault CSWA & DUMMY SLOT -->
+                <div class="edu-card-modern">
+                    <div>
+                        <div class="edu-inst-logo" style="background: #f0fdf4; color: #16a34a;"><i class="fas fa-award"></i></div>
+                        <h4 class="edu-degree">CSWA — SolidWorks Certified Associate</h4>
+                        <div class="edu-school">Dassault Systèmes</div>
+                        <div class="edu-details">
+                            Certified in fundamental mechanical CAD drafting, dimensioning, basic FEA analysis, and standard engineering practice.
+                        </div>
+                    </div>
+                    <div>
+                        <span class="edu-cgpa-pill" style="background: #f0fdf4; color: #16a34a;"><i class="fas fa-check-circle"></i> Associate Certified</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Honors Showcase -->
+    <section class="awards-section" id="awards">
+        <div class="w-container">
+            <div class="section-header">
+                <span class="section-tag">Recognition</span>
+                <h3 class="heading-4">Honors &amp; Competition Awards</h3>
+                <p class="section-desc">Track record of competitive success across national rocketry challenges and launch readiness evaluations.</p>
+            </div>
+
+            <div class="awards-grid">
+
+                <div class="award-tile">
+                    <div class="award-icon-circle">🥇</div>
+                    <div class="award-title">Gold Medal</div>
+                    <div class="award-sub">Malaysia Rocket Competition 2026<br><strong>1KM Rocket Category</strong></div>
+                </div>
+
+                <div class="award-tile">
+                    <div class="award-icon-circle">🥇</div>
+                    <div class="award-title">Gold Medal</div>
+                    <div class="award-sub">Malaysia Rocket Competition 2025<br><strong>CanSat Category</strong></div>
+                </div>
+
+                <div class="award-tile">
+                    <div class="award-icon-circle">🥇</div>
+                    <div class="award-title">Gold Medal</div>
+                    <div class="award-sub">Malaysia Rocket Competition 2024<br><strong>1KM Rocket Category</strong></div>
+                </div>
+
+                <div class="award-tile">
+                    <div class="award-icon-circle" style="background: #f1f5f9; color: #64748b;">🥈</div>
+                    <div class="award-title">Silver Medal</div>
+                    <div class="award-sub">Malaysia Rocket Competition 2024<br><strong>1KM + CanSat Category</strong></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section (Kumar Narrative Structure) -->
+    <section class="about-me" id="about">
+        <div class="w-container">
+            <div class="section-header">
+                <span class="section-tag">Profile &amp; Vision</span>
+                <h3 class="heading-4">About Me</h3>
+                <p class="section-desc">The driving passion behind hybrid propulsion, aerospace systems, and manufacturing innovation.</p>
+            </div>
+
+            <div class="about-grid-wrapper">
+
+                <div class="about-text-col">
+                    <h4 style="font-family: 'Josefin Sans', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--dark); margin-bottom: 14px;">
+                        Engineering with Precision, Propulsion &amp; Purpose
+                    </h4>
+                    <p>
+                        I am an Aerospace and Mechanical Engineer driven by the challenge of taking complex propulsion equations off the paper and onto the static test stand. During my undergraduate studies at IIUM, my obsession with rocket propulsion took flight when I tackled one of the most stubborn hurdles in hybrid rocketry: paraffin fuel grain brittleness.
+                    </p>
+                    <p>
+                        By synthesizing additive manufacturing with propulsion chemistry — designing a 3D-printed PLA nested skeleton — our research achieved a 200% boost in structural integrity while improving combustion efficiency by 40%. That work sparked six peer-reviewed publications and led directly into captaining the university's sounding rocket team at TEKNOFEST and winning multiple Gold Medals at the Malaysia Rocket Competition.
+                    </p>
+                    <p>
+                        Currently working as a Technical Engineer at Oldenburger Interior while leading the IIUM 2026 TEKNOFEST campaign, I combine hands-on mechanical fabrication, professional SolidWorks design (CSWP), and numerical simulation (ANSYS Fluent / Structural) to build aerospace systems that perform reliably under extreme loads.
+                    </p>
+                </div>
+
+                <div class="about-card-col">
+                    <div class="about-photo-wrapper">
+                        <img src="images/yusuf_profile.jpg" alt="Muhammad Yusuf Bin Mahat">
+                    </div>
+                    <div class="about-card-name">Muhammad Yusuf</div>
+                    <div class="about-card-sub">Aerospace &amp; Propulsion Engineer</div>
+
+                    <div class="about-specs-list">
+                        <div class="spec-row">
+                            <span class="label">Degree:</span>
+                            <span class="val">BEng Mechanical-Aerospace</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="label">Alma Mater:</span>
+                            <span class="val">IIUM, Malaysia</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="label">CAD Level:</span>
+                            <span class="val">Dassault CSWP Certified</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="label">Specialty:</span>
+                            <span class="val">Hybrid Rocket Motors &amp; FEA</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="label">Languages:</span>
+                            <span class="val">English (Proficient), Malay (Native)</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="label">Relocation:</span>
+                            <span class="val" style="color: #16a34a;">Open to Relocate</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Contact Form & Location Status (Kumar #contact-form structure) -->
+    <section class="contact-form" id="contact">
+        <div class="w-container">
+            <div class="section-header">
+                <span class="section-tag">Let's Connect</span>
+                <h3 class="heading-4">Get in Touch</h3>
+                <p class="section-desc">Drop a message below for aerospace engineering collaborations, research partnerships, or career opportunities.</p>
+            </div>
+
+            <div class="contact-layout">
+
+                <!-- Interactive Form -->
+                <div class="form-box">
+                    <form id="portfolioContactForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label class="form-label" for="contactName">Your Name *</label>
+                            <input type="text" id="contactName" class="form-input" placeholder="e.g. Dr. Alex Vance" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contactEmail">Email Address *</label>
+                            <input type="email" id="contactEmail" class="form-input" placeholder="e.g. alex@aerospace.org" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contactSubject">Subject</label>
+                            <input type="text" id="contactSubject" class="form-input" placeholder="e.g. Propulsion R&D Inquiry / Career Opportunity">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contactMsg">Message *</label>
+                            <textarea id="contactMsg" class="form-textarea" placeholder="Write your message here..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-dispatch" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Dispatch Message</span>
+                        </button>
+
+                        <div class="form-feedback success" id="formSuccess">
+                            🚀 Roger that! Your message has been dispatched. Standby for a response!
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Location Status & Direct Links (Kumar style) -->
+                <div class="location-info-col">
+                    <div class="location-card">
+                        <img src="images/location_map.png" alt="Location Map" class="location-map-img">
+                        <div class="location-card-content">
+                            <div class="loc-title">
+                                <span>📍</span>
+                                <span>Location Status</span>
+                            </div>
+                            <p class="loc-text">
+                                <strong>Current Station:</strong> Sendayan, Negeri Sembilan, Malaysia.<br>
+                                <em>"Today in Sendayan. Tomorrow, wherever my mission and aerospace engineering takes me."</em><br>
+                                <span style="font-size: 0.85rem; color: var(--accent); font-weight: 600;">* Actively open to relocation &amp; international opportunities *</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Direct Chat Buttons -->
+                    <div class="direct-chat-buttons">
+                        <a href="https://linkedin.com/in/yusufmahat" target="_blank" class="direct-btn linkedin-btn">
+                            <i class="fab fa-linkedin"></i>
+                            <span>Connect on LinkedIn</span>
+                        </a>
+                        <a href="mailto:yusufmahat01@gmail.com" class="direct-btn email-btn">
+                            <i class="fas fa-envelope"></i>
+                            <span>Direct Email</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Kumar Stephen Hawking Quote Style) -->
+    <footer class="footer">
+        <div class="w-container">
+            <div class="footer-quote">
+                "Ad astra per aspera — Through hardships to the stars."
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 Muhammad Yusuf Bin Mahat · Aerospace &amp; Mechanical Engineer. Built with precision.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Project Modal Dialog -->
+    <div class="modal-overlay" id="projectModal" onclick="handleModalOverlayClick(event)">
+        <div class="modal-box">
+            <button class="modal-close-btn" onclick="closeModal()" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-tag" id="modalTag">Propulsion R&amp;D</div>
+            <h3 class="modal-title" id="modalTitle">Project Title</h3>
+            <div class="modal-body-content" id="modalBody">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts: Webflow core scripts + Interactive Handler -->
+    <script src="js/jquery-3.5.1.min.dc5e7f18c8.js" type="text/javascript"></script>
+    <script src="js/webflow.schunk.36b8fb49256177c8.js" type="text/javascript"></script>
+    <script src="js/webflow.schunk.50d850aa4962b686.js" type="text/javascript"></script>
+    <script src="js/webflow.schunk.b4435221be879eb3.js" type="text/javascript"></script>
+    <script src="js/webflow.569bc144.6c41dcd0d41ca1ca.js" type="text/javascript"></script>
+
+    <script>
+        // Modal Content Database
+        const projectData = {
+            'modal-fyp': {
+                tag: 'Hybrid Rocket Propulsion R&D · IIUM',
+                title: 'Paraffin Hybrid Rocket Fuel Grain Research',
+                html: `
+                    <p><strong>Lead Researcher:</strong> Muhammad Yusuf Bin Mahat | <strong>Supervisor:</strong> Assoc. Prof. Ir. Ts. Dr. Muhammad Hanafi Azami</p>
+                    <p>Paraffin wax is an ideal hybrid rocket fuel due to its fast regression rates; however, its inherent brittleness leads to grain cracking under high launch acceleration and chamber vibration. This research developed an additively manufactured (3D-printed) PLA nested skeleton embedded directly into the paraffin matrix.</p>
+                    <div class="modal-metrics-grid">
+                        <div class="modal-metric-cell">
+                            <strong>+200% Strength</strong>
+                            <span>Tensile & structural load resistance</span>
+                        </div>
+                        <div class="modal-metric-cell">
+                            <strong>+40% Combustion Eff.</strong>
+                            <span>Optimized oxidizer flux mixing</span>
+                        </div>
+                    </div>
+                    <p><strong>Tools Used:</strong> SolidWorks 3D Modeling, ANSYS Static Structural for grain thermal load simulations, FDM slicing for nested skeleton fabrication, custom static-fire test stand instrumentation.</p>
+                    <p><strong>Outcome:</strong> 5 peer-reviewed papers published in the Journal of Aeronautics, Astronautics and Aviation (JoAAA).</p>
+                `
+            },
+            'modal-tekno': {
+                tag: 'International Rocketry Competition',
+                title: 'TEKNOFEST Sounding Rocket (Category A4)',
+                html: `
+                    <p><strong>Role:</strong> Lead Design & Simulation Engineer (2024–2025) · Team Captain (2026)</p>
+                    <p>TEKNOFEST is one of the world's premier aerospace technology competitions held in Turkey. Yusuf led the aerodynamic profile optimization, fin flutter calculations, and internal bay packaging for the sounding rocket.</p>
+                    <div class="modal-metrics-grid">
+                        <div class="modal-metric-cell">
+                            <strong>LRR Cleared</strong>
+                            <span>Launch Readiness Review Approved</span>
+                        </div>
+                        <div class="modal-metric-cell">
+                            <strong>Category A4</strong>
+                            <span>High-altitude sounding class</span>
+                        </div>
+                    </div>
+                    <p><strong>Key Technical Deliverables:</strong> Preliminary Design Review (PDR), Critical Design Review (CDR), 6DOF trajectory simulation in OpenRocket, and composite wet-layup manufacturing of fiberglass motor casing retainers.</p>
+                `
+            },
+            'modal-mrc': {
+                tag: 'National Competition Champion',
+                title: 'Malaysia Rocket Competition (MRC 2024, 2025, 2026)',
+                html: `
+                    <p><strong>Role:</strong> Design, Simulation & Launch Engineer & Mentor</p>
+                    <p>Competed across three consecutive annual championships, developing custom solid propellant sounding rockets with CanSat scientific payloads.</p>
+                    <div class="modal-metrics-grid">
+                        <div class="modal-metric-cell">
+                            <strong>3x Gold Medals</strong>
+                            <span>1KM & CanSat Category Champions</span>
+                        </div>
+                        <div class="modal-metric-cell">
+                            <strong>1x Silver Medal</strong>
+                            <span>Combined Mission Deployment</span>
+                        </div>
+                    </div>
+                    <p><strong>System Highlights:</strong> Dual-deployment parachute recovery mechanism, electronic barometric altimeter deployment triggers, and LoRa ground telemetry packet logging.</p>
+                `
+            },
+            'modal-stem': {
+                tag: 'Industry-Academia Collaboration',
+                title: 'STEM Solid Rocket Motor Program',
+                html: `
+                    <p><strong>Partners:</strong> IIUM Rocket Lab · MTC Defence · Qretive Lab</p>
+                    <p>Collaborative initiative designed to mentor the next generation of aerospace engineers in Malaysia through practical solid rocket motor design and testing.</p>
+                    <div class="modal-metrics-grid">
+                        <div class="modal-metric-cell">
+                            <strong>30+ Students</strong>
+                            <span>Trained in propulsion theory</span>
+                        </div>
+                        <div class="modal-metric-cell">
+                            <strong>Live Fires</strong>
+                            <span>Static test stand verification</span>
+                        </div>
+                    </div>
+                    <p>Conducted workshops at CFS IIUM and physics symposia covering nozzle divergence angles, throat erosion parameters, and propellant safety handling.</p>
+                `
+            },
+            'modal-cad': {
+                tag: 'SolidWorks CSWP & Production',
+                title: 'Production CAD & Additive Manufacturing',
+                html: `
+                    <p><strong>Certifications:</strong> SolidWorks Certified Professional (CSWP) & Associate (CSWA)</p>
+                    <p>Extensive experience developing production-ready assemblies for both commercial interior fabrication at Oldenburger Interior and custom 3D printed mechanical components for clients.</p>
+                    <div class="modal-metrics-grid">
+                        <div class="modal-metric-cell">
+                            <strong>90+ Models</strong>
+                            <span>Parametric assemblies & weldments</span>
+                        </div>
+                        <div class="modal-metric-cell">
+                            <strong>GD&T Ready</strong>
+                            <span>Complete fabrication drafting</span>
+                        </div>
+                    </div>
+                    <p>Mastery of sheet metal forming, weldment structural profiles, interference checking, and FDM 3D printing slicing parameters.</p>
+                `
+            },
+            'modal-dummy': {
+                tag: 'Editable Placeholder Card',
+                title: '[DUMMY PROJECT - READY TO EDIT]',
+                html: `
+                    <p><strong>Note for Yusuf / Nurul:</strong> This is your custom placeholder modal.</p>
+                    <p>Whenever you are ready to update this project with more details, simply open <code>index.main.html</code> and edit the title, description, and metric cells in this section.</p>
+                    <div class="modal-metrics-grid">
+                        <div class="modal-metric-cell">
+                            <strong>[Metric 1]</strong>
+                            <span>[Metric description]</span>
+                        </div>
+                        <div class="modal-metric-cell">
+                            <strong>[Metric 2]</strong>
+                            <span>[Metric description]</span>
+                        </div>
+                    </div>
+                    <p>You can duplicate or modify this block anytime!</p>
+                `
+            }
+        };
+
+        // Modal Open / Close
+        function openModal(id) {
+            const data = projectData[id];
+            if (!data) return;
+            document.getElementById('modalTag').innerText = data.tag;
+            document.getElementById('modalTitle').innerText = data.title;
+            document.getElementById('modalBody').innerHTML = data.html;
+            const modal = document.getElementById('projectModal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('projectModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function handleModalOverlayClick(e) {
+            if (e.target.id === 'projectModal') {
+                closeModal();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // Mobile Nav Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('open');
+            });
+        }
+
+        // Close mobile nav on link click
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navMenu.classList.contains('open')) {
+                    navMenu.classList.remove('open');
+                }
+            });
+        });
+
+        // Interactive Project Filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projCards = document.querySelectorAll('.proj-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.getAttribute('data-filter');
+
+                projCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Interactive Contact Form Feedback
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const feedback = document.getElementById('formSuccess');
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Dispatching...';
+
+            setTimeout(() => {
+                btn.style.display = 'none';
+                feedback.style.display = 'block';
+            }, 800);
+        }
+    </script>
+</body>
+</html>
